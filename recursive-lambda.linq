@@ -4,8 +4,7 @@
 
 var memo = new Dictionary<(BigInteger, int), BigInteger>();
 
-Func<BigInteger, int, BigInteger> pow =
-    delegate { throw new NotImplementedException(); };
+Func<BigInteger, int, BigInteger> pow = null!;
 
 pow = (@base, exponent) => {
     if (exponent <= 0) {
