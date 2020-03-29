@@ -7,7 +7,7 @@ var memo = new Dictionary<(BigInteger, int), BigInteger>();
 Func<BigInteger, int, BigInteger> pow =
     delegate { throw new NotImplementedException(); };
 
-pow = (BigInteger @base, int exponent) => {
+pow = (@base, exponent) => {
     if (exponent <= 0) {
         if (exponent == 0) return BigInteger.One;
         
