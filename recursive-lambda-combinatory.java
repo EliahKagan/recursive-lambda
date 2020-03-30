@@ -1,7 +1,6 @@
 import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Objects;
-import java.util.function.BiFunction;
 
 @FunctionalInterface
 interface TriFunction<T, U, V, R> {
