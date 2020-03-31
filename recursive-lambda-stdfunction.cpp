@@ -38,10 +38,10 @@ int main()
         return result;
     };
 
-    auto ans = my_pow(7, 1013);
+    cpp_int ans = my_pow(7, 1013);
     std::cout << "Computed value: " << ans << '\n';
 
-    auto known = pow(cpp_int{7}, 1013);
+    cpp_int known = pow(cpp_int{7}, 1013);
     std::cout << "Accepted value: " << known << '\n';
 
     std::cout << "Correct?  " << std::boolalpha << (ans == known) << '\n';

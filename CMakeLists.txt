@@ -29,18 +29,19 @@ if(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
         -Wno-c++98-compat
         -Wno-c++98-compat-pedantic
 
-        # FIXME: Do these just for the header that needs them:
-        -Wno-comma
-        -Wno-deprecated
-        -Wno-documentation
-        -Wno-float-conversion
-        -Wno-float-equal
-        -Wno-missing-noreturn
-        -Wno-old-style-cast
-        -Wno-sign-conversion
-        -Wno-reserved-id-macro
-        -Wno-undef
-        -Wno-zero-as-null-pointer-constant
+        # FIXME: Suppress (just) in Boost header, and just with Clang/MSVC
+        # (regular Clang, and also the MSVC compiler, don't need them).
+        #-Wno-comma
+        #-Wno-deprecated
+        #-Wno-documentation
+        #-Wno-float-conversion
+        #-Wno-float-equal
+        #-Wno-missing-noreturn
+        #-Wno-old-style-cast
+        #-Wno-sign-conversion
+        #-Wno-reserved-id-macro
+        #-Wno-undef
+        #-Wno-zero-as-null-pointer-constant
     )
 elseif(MSVC)
     # cl but not clang-cl accepts /Za to reject Microsoft extensions.
