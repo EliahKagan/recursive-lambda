@@ -14,10 +14,10 @@ int main()
         constexpr std::size_t seed {127}, multiplier {131'071};
         const auto& [base, exponent] = key;
 
-        auto prehash = seed;
-        prehash = prehash * multiplier + std::hash<cpp_int>{}(base);
-        prehash = prehash * multiplier + exponent;
-        return prehash;
+        auto code = seed;
+        code = code * multiplier + std::hash<cpp_int>{}(base);
+        code = code * multiplier + exponent;
+        return code;
     };
 
     std::unordered_map<std::tuple<cpp_int, unsigned>, cpp_int, decltype(hash)>
