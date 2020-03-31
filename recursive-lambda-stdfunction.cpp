@@ -9,8 +9,9 @@
 int main()
 {
     using boost::multiprecision::cpp_int;
+    using Key = std::tuple<cpp_int, unsigned>;
 
-    constexpr auto hash = [](const std::tuple<cpp_int, unsigned>& key) {
+    constexpr auto hash = [](const Key& key) {
         constexpr std::size_t seed {127}, multiplier {131'071};
         const auto& [base, exponent] = key;
 
@@ -20,8 +21,7 @@ int main()
         return code;
     };
 
-    std::unordered_map<std::tuple<cpp_int, unsigned>, cpp_int, decltype(hash)>
-    memo {8, hash};
+    std::unordered_map<Key, cpp_int, decltype(hash)> memo {8, hash};
 
     std::function<cpp_int(cpp_int, unsigned)>
     my_pow = [&memo, &my_pow](const cpp_int& base, unsigned exponent) {
