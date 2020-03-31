@@ -27,15 +27,14 @@ int main()
     my_pow = [&memo, &my_pow](const cpp_int& base, unsigned exponent) {
         if (exponent == 0) return cpp_int{1};
 
-        auto key = std::tuple{base, exponent};
-        auto p = memo.find(key);
+        auto p = memo.find({base, exponent});
         if (p != end(memo)) return p->second;
 
         auto result = my_pow(base, exponent / 2);
         result *= result;
         if (exponent % 2 != 0) result *= base;
 
-        memo.emplace(key, result);
+        memo[{base, exponent}] = result;
         return result;
     };
 
