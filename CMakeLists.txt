@@ -56,7 +56,9 @@ endif()
 
 find_package(Boost REQUIRED)
 add_executable(recursive-lambda-stdfunction recursive-lambda-stdfunction.cpp)
+add_executable(recursive-lambda-combinatory recursive-lambda-combinatory.cpp)
 target_link_libraries(recursive-lambda-stdfunction PRIVATE Boost::boost)
+target_link_libraries(recursive-lambda-combinatory PRIVATE Boost::boost)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
