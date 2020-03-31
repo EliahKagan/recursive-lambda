@@ -21,7 +21,7 @@ int main()
         return code;
     };
 
-    std::unordered_map<Key, cpp_int, decltype(hash)> memo {8, hash};
+    std::unordered_map<Key, cpp_int, decltype(hash)> memo;
 
     std::function<cpp_int(cpp_int, unsigned)>
     my_pow = [&memo, &my_pow](const cpp_int& base, unsigned exponent) {
