@@ -1,1 +1,5 @@
+# Java build files (ad hoc)
 *.class
+
+# C++ build files (CMake)
+/build/
