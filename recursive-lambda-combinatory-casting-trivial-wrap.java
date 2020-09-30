@@ -1,7 +1,7 @@
 import java.util.function.BiFunction;
 import java.util.function.IntUnaryOperator;
 
-final class RecursiveLambdaCombinatoryTrivialWrap {
+final class RecursiveLambdaCombinatoryCastingTrivialWrap {
     public static void main(final String[] args) {
         IntUnaryOperator fib = n -> {
             BiFunction<Object, Integer, Integer> f = (me, k) -> {

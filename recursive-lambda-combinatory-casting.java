@@ -7,7 +7,7 @@ interface TriFunction<T, U, V, R> {
     R apply(T t, U u, V v);
 }
 
-final class RecursiveLambdaCombinatory {
+final class RecursiveLambdaCombinatoryCasting {
     private static final class Key {
         Key(BigInteger base, int exponent) {
             if (base == null) throw new NullPointerException();

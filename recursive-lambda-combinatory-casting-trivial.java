@@ -1,6 +1,6 @@
 import java.util.function.BiFunction;
 
-final class RecursiveLambdaCombinatoryTrivial {
+final class RecursiveLambdaCombinatoryCastingTrivial {
     public static void main(final String[] args) {
         BiFunction<Object, Integer, Integer> fib = (me, n) -> {
             @SuppressWarnings("unchecked")
