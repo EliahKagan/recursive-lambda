@@ -72,7 +72,7 @@ gist. This repository contains C# and C++ examples in addition to more Java
 examples than in that gist. (I consider this to supersede that gist.)
 
 The C# programs are supplied as [LINQPad queries](https://www.linqpad.net/) but
-the could be modified to not use LINQPad&rsquo;s `Dump` extension method.
+they could be modified to not use LINQPad&rsquo;s `Dump` extension method.
 
 The C++ programs use the [Boost Multiprecision
 Library](https://github.com/boostorg/multiprecision#boost-multiprecision-library)
