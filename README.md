@@ -48,7 +48,8 @@ Java, C#, and C++. But there are workarounds:
 
   An important interface detail is whether this augmented function object
   should be directly accessible to outside callers, or wrapped inside (or
-  captured by) another function object that does not
+  captured by) another function object that doesn&rsquo;t have that extra
+  parameter.
 
 - **[Capturing](https://en.wikipedia.org/wiki/Closure_(computer_programming)#Lexical_environment):**
   In C# and C++, a lambda can capture a variable that is then modified to
