@@ -16,3 +16,8 @@
 
 # C++ build files (CMake)
 /build/
+/out/
+
+# Editor files
+/*.iml
+/.idea/
